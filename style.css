@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #333; /* Dark grey background */
+}
+
+.wrapper {
+    width: 600px; /* Adjusted width for a larger square white box */
+    height: 600px; /* Adjusted height for a larger square white box */
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center items both horizontally and vertically */
+    flex-direction: column;
+    padding: 40px; /* Increased padding for more space around the content */
+    position: relative; /* Added relative positioning for absolute positioning of bunny */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Set font to Arial */
+    font-size: 1.8em; /* Decreased font size */
+    color: #333;
+    text-align: center; /* Center the text */
+    margin-bottom: 15px;
+}
+
+.bunny {
+    position: absolute;
+    left: -50px; /* Adjusted position to be outside the white box */
+    top: 50px; /* Adjusted position vertically */
+    font-size: 2em;
+}
+
+.btn-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Increased margin at the top for separation */
+}
+
+button {
+    width: 48%; /* Adjusted button width */
+    height: 70px; /* Set button height to make them square */
+    font-size: 1em; /* Decreased font size */
+    font-weight: 600;
+    border: 2px solid #333; /* Dark grey border */
+    border-radius: 15px; /* Added rounded edges */
+    outline: none;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+
+.yes-btn,
+.no-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.yes-btn {
+    background: #333; /* Dark grey for "Yes" */
+    color: #fff; /* White text color */
+    border-radius: 15px; /* Added rounded edges */
+}
+
+.no-btn {
+    background: #fff; /* White for "No" */
+    color: #333; /* Dark grey text color */
+    border-radius: 15px; /* Added rounded edges */
+}
+
+@keyframes infinityAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.infinity {
+    width: 100%;
+    height: 20px;
+    background: linear-gradient(to right, #333, #fff, #333); /* Gradient for infinity effect */
+    position: absolute;
+    bottom: 0;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    animation: infinityAnimation 1s infinite;
+}
